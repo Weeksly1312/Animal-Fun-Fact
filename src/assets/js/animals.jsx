@@ -48,3 +48,14 @@ for (const animal in animals) {
 }
 
 const showBackground = true;
+
+export const animalsFacts = (
+  <div>
+    <h1>{title || "Title Here"}</h1>
+    {showBackground && (
+      <img className="background" alt="ocean" src="/images/ocean.jpg" />
+    )}
+    <div className="animals">{images}</div>
+    <p id="fact"></p>
+  </div>
+);
