@@ -25,3 +25,26 @@ export const animals = {
   },
 };
 
+const name = ""; 
+const title = "Animals Fun Facts";
+
+const images = [];
+
+for (const animal in animals) {
+  if (animals.hasOwnProperty(animal)) {
+    images.push(
+      <img
+        key={animal}
+        className="animal"
+        alt={animal}
+        src={animals[animal].image}
+        aria-label={animal}
+        role="button"
+        onClick={displayFact}
+        style={{ width: "150px", height: "150px" }} // Set the width and height
+      />
+    );
+  }
+}
+
+const showBackground = true;
