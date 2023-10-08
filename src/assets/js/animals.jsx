@@ -59,3 +59,14 @@ export const animalsFacts = (
     <p id="fact"></p>
   </div>
 );
+
+function displayFact(e) {
+  const animalName = e.target.alt;
+  const factsArray = animals[animalName].facts;
+  const randomIndex = Math.floor(Math.random() * factsArray.length);
+  const funFact = factsArray[randomIndex];
+
+  // Update the content of the 'fact' element
+  const factElement = document.getElementById("fact");
+  factElement.innerHTML = `Fun Fact about ${animalName}: ${funFact}`;
+}
